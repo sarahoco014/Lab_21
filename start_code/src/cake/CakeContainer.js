@@ -49,11 +49,12 @@ const CakeContainer = () => {
 
   return (
     <>
-        <Cake />
-        <Cake />
-        <Cake />
+    {listOfCakes.map((cake, index) => (
+		<Cake key={index} cake={cake} />
+	))}
     </>
-  )
+  );
 }
+
 
 export default CakeContainer;

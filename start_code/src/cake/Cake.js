@@ -1,8 +1,17 @@
-const Cake = () => {
+const Cake = ({cake}) => {
 
   return (
     <>
-        <h2>This is a cake</h2>
+        <h2>{cake.cakeName}</h2>
+        <p>Ingredients:
+        <ul>
+          {cake.ingredients.map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
+          ))}
+          </ul>
+        </p>
+        <p>Price: {cake.price}</p>
+        <p>Rating: {cake.rating}</p>
     </>
   )
 }
